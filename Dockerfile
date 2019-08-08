@@ -2,7 +2,7 @@ FROM tensorflow/tensorflow:1.14.0-gpu-py3
 
 RUN apt-get -y update
 
-RUN apt-get install -y software-properties-common wget
+RUN apt-get install -y software-properties-common wget libsm6 libxext6 libxrender-dev
 
 RUN mkdir -p /root/.torch/models
 
