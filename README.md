@@ -1,9 +1,9 @@
 # DeOldify Colorizer
 
 <p>
-    <a href="https://cloud.docker.com/u/deepaiorg/repository/docker/deepaiorg/colorizer">
-        <img src='https://img.shields.io/docker/cloud/automated/deepaiorg/colorizer.svg?style=plastic' />
-        <img src='https://img.shields.io/docker/cloud/build/deepaiorg/colorizer.svg' />
+    <a href="https://cloud.docker.com/u/deepaiorg/repository/docker/deepaiorg/colorization">
+        <img src='https://img.shields.io/docker/cloud/automated/deepaiorg/colorization.svg?style=plastic' />
+        <img src='https://img.shields.io/docker/cloud/build/deepaiorg/colorization.svg' />
     </a>
 </p>
 
@@ -17,11 +17,11 @@ Nvidia-Docker is required to run this image.
 
 # Quick Start
 
-docker pull deepaiorg/colorizer
+docker pull deepaiorg/colorization
 
 ### HTTP
 ```bash
-nvidia-docker run --rm -it -e MODE=http -p 5000:5000 deepaiorg/colorizer
+nvidia-docker run --rm -it -e MODE=http -p 5000:5000 deepaiorg/colorization
 ```
 Open your browser to localhost:5000 (or the correct IP address)
 
@@ -29,11 +29,11 @@ Open your browser to localhost:5000 (or the correct IP address)
 
 Save your image as content.jpg in the current directory.
 ```bash
-nvidia-docker run --rm -it -v `pwd`:/shared -e MODE=command_line deepaiorg/colorizer --image /shared/content.jpg --output /shared/output.jpg
+nvidia-docker run --rm -it -v `pwd`:/shared -e MODE=command_line deepaiorg/colorization --image /shared/content.jpg --output /shared/output.jpg
 ```
 # Docker build
 ```bash
-docker build -t colorizer .
+docker build -t colorization .
 ```
 
 # Author Credit
