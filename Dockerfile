@@ -4,7 +4,7 @@ RUN apt-get -y update
 
 RUN apt-get install -y software-properties-common wget libsm6 libxext6 libxrender-dev
 
-RUN mkdir -p /root/.torch/models
+RUN mkdir -p /root/.cache/torch/checkpoints/
 
 RUN mkdir -p /data/models
 
