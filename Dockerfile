@@ -1,8 +1,8 @@
-FROM nvcr.io/nvidia/pytorch:19.04-py3
+FROM tensorflow/tensorflow:1.14.0-gpu-py3
 
 RUN apt-get -y update
 
-RUN apt-get install -y python3-pip software-properties-common wget
+RUN apt-get install -y software-properties-common wget
 
 RUN mkdir -p /root/.torch/models
 
