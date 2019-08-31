@@ -32,10 +32,7 @@ while True:
             render_factor = int(inputs_dict['render_factor'])
 
         result_image = image_colorizer.get_transformed_image(image, render_factor=render_factor)
-
-        converter = PIL.ImageEnhance.Color(result_image)
-        result_image = converter.enhance(1.6)
-
+        
         imgByteArr = io.BytesIO()
         result_image.save(imgByteArr, format='JPEG', subsampling=0, quality=98)
         imgByteArr = imgByteArr.getvalue()
